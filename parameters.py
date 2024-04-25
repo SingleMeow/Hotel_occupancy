@@ -1,0 +1,2 @@
+STEPS = 15
+N_FEATURES = 8
