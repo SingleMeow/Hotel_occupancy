@@ -67,5 +67,6 @@ if __name__ == '__main__':
     data = interpolate_data(pd.read_excel("Данные по загрузке.xlsx", index_col = 0))
     data.to_excel("Интерполированные данные.xlsx")
     X_train, y_train, X_test, y_test = data_to_inputs(data)
+    print(X_train.shape)
     np.savez("data_numpy.npz", X_train, y_train, X_test, y_test)
     print("Обработка закончена")
