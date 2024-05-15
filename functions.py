@@ -73,7 +73,7 @@ def create_model(neuron_type = "LSTM", n_cells = 3, learn_rate = 0.001):
         case _:
             print("Не найден тип")
             return
-    # model1.add(Dense(3, activation = "relu", kernel_initializer = initial))
+    model1.add(Dense(2, activation = "relu", kernel_initializer = initial))
     model1.add(Dense(1, activation = "hard_sigmoid", kernel_initializer = initial))
     model1.compile(loss = MeanSquaredError(), optimizer = Adam(learning_rate = learn_rate), metrics= ["mean_absolute_percentage_error"])
     model1.summary()

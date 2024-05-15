@@ -15,9 +15,9 @@ import plotly.graph_objects as go
 STEPS = params.STEPS
 N_FEATURES = params.N_FEATURES
 
-model_name = 'GRU_2_15 steps.keras'
+model_name = 'LSTM_5_15 steps.keras'
 data = pd.read_excel('Интерполированные данные.xlsx', index_col = 0)
-target_date = datetime.combine(date(2024, 4, 23), datetime.min.time())
+target_date = datetime.combine(date(2024, 5, 15), datetime.min.time())
 row = data.loc[target_date]
 row.dropna(inplace = True)
 X, _ = manage_row_in_X(row_to_factors(row))
